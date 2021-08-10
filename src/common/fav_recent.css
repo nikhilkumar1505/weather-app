@@ -1,0 +1,17 @@
+.detail-header {
+  margin-top: 0.5em;
+  padding: 1em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+}
+
+.detail-header button {
+    border:none;
+    outline:none;
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+}

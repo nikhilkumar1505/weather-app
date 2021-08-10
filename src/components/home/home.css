@@ -1,0 +1,77 @@
+.main-div {
+  margin-top: 4.4em;
+  color: white;
+  font-size: 100%;
+}
+.main-div h1 {
+  text-transform: capitalize;
+  margin-bottom: 1.4rem;
+}
+.add-to-fav {
+  display: flex;
+  flex-direction: column;
+}
+.add-to-fav p {
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.display-info {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.not-a-fav {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.added-to-fav {
+  color: #ffd639;
+  display: flex;
+  align-items: center;
+}
+.display-info img {
+  width: 4rem;
+  height: 3.2rem;
+}
+.display-info p {
+ text-transform: capitalize;
+}
+.temperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.temperature p {
+  font-size: 4rem;
+  margin-right: 0.5rem;
+}
+.temperature button {
+  box-sizing: border-box;
+  height: 1.87rem;
+  width: 1.75rem;
+  border: 1px solid #ffffff;
+  border-radius: .125rem 0 0 .125rem;
+  cursor: pointer;
+  color: #ffff;
+  background-color: transparent;
+}
+@media all and (max-width: 500px) {
+  .add-to-fav {
+    align-items: center;
+  }
+  .temperature p {
+    font-size: 3rem;
+  }
+  .main-div{
+    margin-top:2em;
+  }
+  .display-info {
+  margin-top: 5rem;
+  
+}
+}

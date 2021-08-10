@@ -1,0 +1,31 @@
+.dialog-box-main {
+  padding: 2em 1.5em;
+  text-align: center;
+  height:25vh;
+  
+}
+.title {
+  font-size: 1rem;
+  margin: 2rem;
+}
+.btn-main{
+    margin-top:5em;
+    font-weight: 550;
+}
+.btn-btn-no {
+  background-color: transparent;
+  padding: 0.4rem 2rem;
+  border: none;
+  border-radius:0.25rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-btn-yes {
+  background-color: #f76b1c;
+  padding: 0.4rem 2rem;
+  color: #ffff;
+  border: none;
+  border-radius:0.25rem;
+  cursor: pointer;
+  font-weight: 600;
+}
