@@ -2,7 +2,12 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  border-bottom: 1px solid #ffff;
+  z-index: 2;
+}
+.line {
+  border-bottom: 1px solid #ffffff44;
+  margin-top: -1px;
+  z-index: 1
 }
 .navigation-tab {
   display: flex;
@@ -11,26 +16,37 @@
   font-weight: 500;
 }
 .navigation-item {
-  padding: 0.3em 1.5em;
+  padding: 0em 1.5em;
   text-decoration: none;
   color: white;
-  font-size: 0.8125rem;
+  font-size: 1.3rem;
+  padding-bottom: 0.3rem;
 }
 .active-page {
   color: #fad05b;
   text-decoration: none;
-  border-bottom: 2px solid #fad05b;
+  border-bottom: 1.5px solid #fad05b;
 }
-.current-date-time p {
+.current-date-time {
   color: white;
   display: flex;
-  margin-left: 1em;
+  font-size: 1.4rem;
+  margin-right:1em;
 }
 .current-date-time .time {
-  margin-left: 1em;
   text-transform: uppercase;
 }
-@media all and (max-width: 500px) {
+@media all and (min-width:550px ) and (max-width:780px){
+.navigation-item {
+  padding: 0em 1.2em;
+}
+.current-date-time {
+  font-size: 0.9rem;
+  margin-right:0.6em;
+}
+}
+
+@media all and (max-width: 550px) {
   .navigation-tab-main {
     border: none;
     display: flex;
@@ -41,39 +57,40 @@
     display: none;
   }
   .current-date-time p {
-    font-weight: 550;
-    margin-top: 2em;
-    opacity: 0.6;
+    display: none;
   }
   .mobile-menu {
     display: flex;
     flex-direction: column;
     background-color: #ffff;
     top: 0px;
-    z-index:2;
+    z-index: 2;
     height: 100%;
     left: 0;
-    width: 40%;
-    padding:4.5em 1em;
+    width: 50%;
+    padding: 7em 1em;
     position: absolute;
   }
   .mobile-menu {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-weight: 500;
-}
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 500;
+  }
   .mobile-menu .navigation-item {
     font-weight: 580;
     color: #707070;
     text-transform: capitalize;
-    float:left;
-    margin:0.5em;
+    float: left;
+    margin: 0.8em;
   }
   .mobile-menu .active-page {
     font-weight: 580;
     color: #000000;
     text-transform: capitalize;
     border: none;
+  }
+  .line {
+    display: none;
   }
 }

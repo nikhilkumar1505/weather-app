@@ -1,13 +1,13 @@
 .weather-list-main {
-  min-height: 4.5em;
+  min-height: 5.4em;
   width: 100%;
   background-color: #ffffff22;
   color: rgba(34, 24, 24, 0.694);
-  padding: 0.8em 0em;
+  padding: 1.8em 0em;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.2em;
   color: #ffff;
 }
 .weather-list-main:hover {
@@ -20,48 +20,78 @@
   width: 95%;
 }
 .weather-list-child-col1 {
-  max-width: 20%;
-  flex: 1;
+  max-width: 37%;
+  flex: 2;
 }
+p{
+  font-size:1.6rem;
+}
+
 .city-name:hover {
   color: #fad05b;
+  cursor:pointer;
 }
 .weather-center-details {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  max-width: 40%;
   flex: 1;
 }
 .weather-center-details img {
-  height: 2.1rem;
-  width: 2.5rem;
+  height: 3.2rem;
+  width: 3.6rem;
 }
-.weather-type {
-  margin-left: 2rem;
-  font-size: 1.125rem;
-}
+
 .weather-temp {
-  margin-left: 1.5rem;
-  font-size: 500;
+  margin-left: 2.8rem;
+  font-weight: 500;
 }
 .weather-temp-value {
-  font-size: 2rem;
+  font-size: 3.2rem;
+}
+.weather-type {
+  margin-left: 3rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
 }
 .fav-icon {
-  flex: 2;
-  font-size: 1.2rem;
+  flex: 1;
+  font-size: 1.8rem;
   max-width: 5%;
+  cursor:pointer;
 }
-@media all and (min-width: 500px) {
+@media all and (min-width: 410px) {
   .weather-list-mobile-view {
     display: none;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (min-width: 420px) and (max-width:780px) {
+ .weather-list-child-col1 {
+  flex: 2;
+  max-width: 30%;
+}
+.weather-center-details img {
+  height: 2.2rem;
+  width: 2.6rem;
+}
+.weather-temp {
+  margin-left: 1.2rem;
+}
+.weather-temp-value {
+  font-size: 2.2rem;
+}
+.weather-type {
+  margin-left: 1.8rem;
+  font-size: 1.4rem;
+}
+
+}
+
+@media all and (max-width: 420px) {
   .city-name {
     color: #fad05b;
     width: auto;
+    font-size:1.8rem;
   }
   .weather-list-child-col1 {
     max-width: 90%;
@@ -74,18 +104,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0.8em 0;
+    margin: 1.6em 0;
   }
   .weather-list-mobile-view p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-right: 1em;
+  }
+  .weather-list-mobile-view p:last-of-type  {
+    font-size: 2rem;
+    text-transform: capitalize;
   }
   .weather-list-mobile-view img {
-    width: 1.725rem;
-    height: 1.275rem;
-    margin-right: 1em;
+    width: 3rem;
+    height: 2.4rem;
+    margin-right: 2em;
   }
   .weather-temp-value-mobile-view {
-    font-size: 1.4rem;
+    font-size: 2.25rem;
   }
 }

@@ -7,15 +7,16 @@ import "../../common/fav_recent.css";
 
 const RecentSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { storedData, setStoredData } = useContext(WeatherContext);
+  const { recentData, setRecentData } = useContext(WeatherContext);
+  // const { storedData } = store;
 
   const closeFunctional = () => {
-    setStoredData("");
+    setRecentData( "" );
   };
 
   return (
     <div>
-      {storedData.length === 0 ? (
+      {recentData.length === 0 ? (
         <NotFound Text={"No Recent Search"} />
       ) : (
         <>
@@ -23,7 +24,7 @@ const RecentSearch = () => {
             <p>You recently searched for</p>
             <button onClick={() => setIsOpen(true)}>Clear All</button>
           </div>
-          <WeatherList data={[...storedData]} />
+          <WeatherList data={[...recentData]} />
           <DialogBox
             isOpen={isOpen}
             setIsOpen={setIsOpen}

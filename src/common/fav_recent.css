@@ -1,12 +1,13 @@
 .detail-header {
-  margin-top: 0.5em;
-  padding: 1em;
+  margin-top: 0.4em;
+  padding: 1.3em;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8125rem;
+  font-size: 1.3rem;
 }
+
 
 .detail-header button {
     border:none;
@@ -14,4 +15,11 @@
     background-color: transparent;
     color:white;
     cursor: pointer;
+}
+@media screen and (max-width:780px) {
+  .detail-header {
+  margin-top: 0.8em;
+  padding: 2em;
+  font-size: 1.1rem;
+}
 }

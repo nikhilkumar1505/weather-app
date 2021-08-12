@@ -1,27 +1,24 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { FaHeart } from "react-icons/fa";
+import { BsHeartFill } from "react-icons/bs";
+import { BsHeart } from "react-icons/bs";
 import WeatherData from "./WeatherData";
-import { newData, convertTempUnit, selectImage } from "../../services/Utilis";
+import {  convertTempUnit, selectImage } from "../../services/Utilis";
 import { WeatherContext } from "../../services/ContextApi";
 import "./home.css";
 
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?";
 
 const Home = () => {
-  const [unit, setUnit] = useState("metric");
+  const date = new Date();
+  const currentDate = date.toUTCString().slice(0, -12);
+  const currentTime = date.toLocaleTimeString([], { timeStyle: "short" });
   const [location, setLocation] = useState({
     latitude: "",
     longitude: "",
   });
-  const {
-    weatherData,
-    setWeatherData,
-    favData,
-    setFavData,
-    setFavIcon,
-    favIcon,
-  } = useContext(WeatherContext);
+  const { store, setStore } = useContext(WeatherContext);
+  const { weatherData, favIcon, unit, locationCall, storedData,cityId } = store;
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) =>
@@ -34,26 +31,8 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    InitialApiCall(location);
+    locationCall && InitialApiCall(location);
   }, [location.getLocation]);
-
-  useEffect(() => {
-    if (weatherData && favIcon) {
-      favData && favData.some((x) => x.cityId === weatherData.id)
-        ? updateWeatherData(weatherData)
-        : insertWeatherData(weatherData);
-    }
-  }, [favIcon]);
-
-  const updateWeatherData = (data) => {
-    const index = favData.findIndex((x) => x.cityId === data.id);
-    favData[index] = newData(data, favIcon);
-    setFavData(favData);
-  };
-
-  const insertWeatherData = (data) => {
-    setFavData([...favData, newData(data, favIcon)]);
-  };
 
   const InitialApiCall = async (location) => {
     const response = await axios
@@ -63,7 +42,7 @@ const Home = () => {
       )
       .catch((err) => console.log(err));
     if (response) {
-      setWeatherData(response.data);
+      setStore({ ...store, ["weatherData"]: response.data });
     } else setLocation({ ...location, getLocation: true });
   };
 
@@ -72,8 +51,15 @@ const Home = () => {
     color: " #E32843",
   };
 
+
   return (
     <div className="main-div">
+      <div className="mobile-time-display">
+        <p>
+          {currentDate}
+          <span className="time">{currentTime}</span>
+        </p>
+      </div>
       {weatherData && (
         <>
           <div className="add-to-fav">
@@ -82,12 +68,21 @@ const Home = () => {
               <input
                 type="checkbox"
                 value={favIcon}
-                onClick={(e) => setFavIcon(e.target.checked)}
+                onClick={(e) =>
+                  setStore({ ...store, ["favIcon"]: e.target.checked })
+                }
               />
-              <div className={!favIcon ? "not-a-fav" : "added-to-fav"}>
-                <FaHeart fontSize="1.1rem" />
-                <p>{favIcon ? "Added to favourite" : "Add to favourite"}</p>
-              </div>
+              {favIcon ? (
+                <div className="added-to-fav">
+                  <BsHeartFill className='like-icon' />
+                  <p>Added to favourite</p>
+                </div>
+              ) : (
+                <div className="not-a-fav">
+                  <BsHeart className='like-icon' />
+                  <p>Add to favourite</p>
+                </div>
+              )}
             </label>
           </div>
           <div className="display-info">
@@ -97,24 +92,26 @@ const Home = () => {
             />
             <div className="temperature">
               <p>{convertTempUnit(weatherData.main.temp, unit)}</p>
-              <button
-                style={unit === "metric" ? buttonStyles : null}
-                onClick={() => setUnit("metric")}
-              >
-                °C
-              </button>
-              <button
-                style={unit === "imperial" ? buttonStyles : null}
-                onClick={() => setUnit("imperial")}
-              >
-                °F
-              </button>
+              <div className="temp-button">
+                <button
+                  style={unit === "metric" ? buttonStyles : null}
+                  onClick={() => setStore({ ...store, ["unit"]: "metric" })}
+                >
+                  °C
+                </button>
+                <button
+                  style={unit === "imperial" ? buttonStyles : null}
+                  onClick={() => setStore({ ...store, ["unit"]: "imperial" })}
+                >
+                  °F
+                </button>
+              </div>
             </div>
-            <p style={{ fontSize: "1.25rem" }}>
+            <p style={{ fontSize: "2rem" }}>
               {weatherData.weather[0].description}
             </p>
           </div>
-          <WeatherData climateDetails={weatherData} unit={unit} />
+          <WeatherData climateDetails={weatherData} />
         </>
       )}
     </div>

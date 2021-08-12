@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { WeatherContext } from "../../services/ContextApi";
 import temparature from "../../assets/temparature.png";
 import preception from "../../assets/preception.png";
 import humidity from "../../assets/humidity.png";
@@ -8,7 +8,9 @@ import visibility from "../../assets/visibility.png";
 import { convertTempUnit } from "../../services/Utilis";
 import "./weatherData.css";
 
-const WeatherData = ({ climateDetails, unit }) => {
+const WeatherData = ({ climateDetails }) => {
+  const { store } = useContext(WeatherContext);
+  const { unit } = store;
   const weatherData = [
     {
       name: "Min - Max",
@@ -30,12 +32,12 @@ const WeatherData = ({ climateDetails, unit }) => {
     },
     {
       name: "Wind",
-      value: `${parseInt(climateDetails.wind.speed * 2.237)}mph`,
+      value: `${parseInt(climateDetails.wind.speed * 2.237)} mph`,
       image: wind,
     },
     {
       name: "Visibility",
-      value: `${climateDetails.visibility}`,
+      value: `${climateDetails.visibility} m`,
       image: visibility,
     },
   ];
