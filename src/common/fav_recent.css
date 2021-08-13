@@ -8,18 +8,18 @@
   font-size: 1.3rem;
 }
 
-
 .detail-header button {
-    border:none;
-    outline:none;
-    background-color: transparent;
-    color:white;
-    cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
 }
-@media screen and (max-width:780px) {
+@media screen and (max-width: 780px) {
   .detail-header {
-  margin-top: 0.8em;
-  padding: 2em;
-  font-size: 1.1rem;
-}
+    margin-top: 0.8em;
+    padding: 2em;
+    font-size: 1.1rem;
+    margin-left: -2em;
+  }
 }

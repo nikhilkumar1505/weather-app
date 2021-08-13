@@ -26,6 +26,7 @@ body {
   body,
   html {
     font-size: 50%;
+    transition:all 0.2s ease-in-out;
   }
 }
 @media all and (min-width: 420px) and (max-width: 770px) {
@@ -35,5 +36,6 @@ body {
   body,
   html {
     font-size: 56.25%;
+    transition:all 0.2s ease-in-out;
   }
 }

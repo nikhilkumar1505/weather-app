@@ -18,7 +18,7 @@ const Home = () => {
     longitude: "",
   });
   const { store, setStore } = useContext(WeatherContext);
-  const { weatherData, favIcon, unit, locationCall, storedData,cityId } = store;
+  const { weatherData, favIcon, unit, locationCall} = store;
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) =>

@@ -8,7 +8,6 @@ import "../../common/fav_recent.css";
 const RecentSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { recentData, setRecentData } = useContext(WeatherContext);
-  // const { storedData } = store;
 
   const closeFunctional = () => {
     setRecentData( "" );

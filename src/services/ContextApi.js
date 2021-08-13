@@ -14,6 +14,7 @@ export const Weatherprovider = ({ children }) => {
   const [favData, setFavData] = useState([]);
   const [recentData, setRecentData] = useState([]);
 
+  //add only favrouite element to different array
   useEffect(() => {
     if (store.storedData.lenght !== 0) {
       const value = store["storedData"].filter((item) => item.fav !== false);

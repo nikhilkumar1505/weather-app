@@ -37,14 +37,10 @@ const Main = () => {
       ["storedData"]: [...storedData, newData(data, favIcon, unit)],
     });
   };
-
-  const handleSearch = () => {
-    setSearch(true);
-  };
   
   const handleEnter = (e) => {
     if (e.key === "Enter") {
-      handleSearch();
+      setSearch(true)
     }
   };
 
@@ -57,7 +53,7 @@ const Main = () => {
             style={{ color: !open ? "white" : "black" }}
             onClick={() => setOpen(!open)}
           >
-            <FiMenu fontSize='3rem' />
+            <FiMenu fontSize="3rem" />
           </div>
           <img src={logo} alt="title_logo" />
         </div>
@@ -73,7 +69,7 @@ const Main = () => {
           <div>
             <AiOutlineSearch
               className="search"
-              onClick={() => handleSearch()}
+              onClick={() => setSearch(true)}
             />
           </div>
         </div>

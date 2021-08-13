@@ -6,8 +6,7 @@
   flex-flow: row wrap;
   align-items: baseline;
   justify-content: space-around;
-  margin-bottom:2em;
- 
+  margin-bottom: 2em;
 }
 .weather-parent {
   display: flex;
@@ -24,7 +23,7 @@
   align-items: baseline;
   flex-direction: column;
   margin-left: 1.2rem;
-  flex:1;
+  flex: 1;
 }
 .weather-name {
   font-size: 1.5rem;
@@ -33,32 +32,46 @@
   font-size: 1.6rem;
   font-weight: 580;
 }
-@media all and (min-width: 420px)  and (max-width:770px) {
- .weather-data-main{
-   margin-top: 8.4em;
-   padding-top:3.9em;
- }
- 
-  .weather-parent{
-   margin:1.5em;
-   padding:1.6em;
+@media all and (min-width: 420px) and (max-width: 770px) {
+  .weather-data-main {
+    margin-top: 8.4em;
+    padding-top: 3.9em;
   }
-  .weather-child p{
-    font-size:1.8rem
+
+  .weather-parent {
+    margin: 1.5em;
+    padding: 1.6em;
+  }
+  .weather-child p {
+    font-size: 1.8rem;
   }
 }
 @media all and (max-width: 420px) {
   .weather-data-main {
     background-color: #ffffff11;
     border-top: 1px solid #ffffff55;
-   margin-top: 15em;
-   padding-top:5em;
+    margin-top: 8em;
+    padding: 3em 0em;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    align-items: center;
+    margin-bottom: 0em;
   }
-  .weather-parent{
-   margin:1.8em;
-   padding:1.8em;
+.weather-data-main::-webkit-scrollbar{
+  display:none;
+}
+  .weather-parent {
+    margin: 1em;
+    display: flex;
+    padding: 2em;
+    padding-right: 10em;
+    min-width:25em;
+  
   }
-  .weather-child p{
-    font-size:2rem
+  .weather-child p {
+    font-size: 2rem;
+      
   }
 }

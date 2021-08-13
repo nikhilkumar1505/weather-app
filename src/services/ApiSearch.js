@@ -23,7 +23,9 @@ const ApiSearch = ({ input, setInput, search, setSearch }) => {
     else return false;
   };
 
+  
   const inputApiSearch = async () => {
+    setSearch(false);
     const response = await axios
       .get(
         BASE_URL +
@@ -32,7 +34,6 @@ const ApiSearch = ({ input, setInput, search, setSearch }) => {
       .catch((err) => console.log(err));
     if (response) {
       setInput("");
-      setSearch(false);
       setStore({
         ...store,
         ["cityId"]: 0,

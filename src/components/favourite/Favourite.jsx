@@ -11,7 +11,9 @@ const Favourite = () => {
 
   useEffect(() => {
     setFavData((previousFavData) =>
-      previousFavData.filter((fav) => fav.fav !== (false || undefined))
+      previousFavData && previousFavData.filter(
+        (fav) => fav.fav !== (false || undefined)
+      )
     );
   }, []);
 
