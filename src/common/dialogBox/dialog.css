@@ -1,31 +1,31 @@
 .dialog-box-main {
-  padding: 2em 1.5em;
+  padding: 3.2em 2.4em;
   text-align: center;
-  height:25vh;
-  
+  height: 25vh;
+
+  border-radius: 2rem;
 }
 .title {
-  font-size: 1rem;
-  margin: 2rem;
+  font-size: 1.6rem;
+  margin: 3.2rem;
 }
-.btn-main{
-    margin-top:5em;
-    font-weight: 550;
+.btn-main {
+  margin-top: 7em;
+  font-weight: 550;
 }
 .btn-btn-no {
   background-color: transparent;
-  padding: 0.4rem 2rem;
+  padding: 0.7rem 3.2rem;
   border: none;
-  border-radius:0.25rem;
+  border-radius: 0.4rem;
   cursor: pointer;
   font-weight: 600;
 }
 .btn-btn-yes {
   background-color: #f76b1c;
-  padding: 0.4rem 2rem;
-  color: #ffff;
+  padding: 0.7rem 3.2rem;
   border: none;
-  border-radius:0.25rem;
+  border-radius: 0.4rem;
   cursor: pointer;
   font-weight: 600;
 }

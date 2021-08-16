@@ -1,30 +1,35 @@
 .main-div {
-  margin-top: 4.4em;
+  margin-top: 4.7em;
   color: white;
-  font-size: 100%;
 }
 .main-div h1 {
   text-transform: capitalize;
-  margin-bottom: 1.4rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.mobile-time-display {
+  display: none;
+}
+.like-icon {
+  font-size:1.7rem;
 }
 .add-to-fav {
   display: flex;
   flex-direction: column;
 }
 .add-to-fav p {
-  font-size: 0.8rem;
-  margin-left: 0.2rem;
+  font-size: 1.3rem;
+  margin-left: 0.7rem;
   cursor: pointer;
 }
 input[type="checkbox"] {
   display: none;
 }
 .display-info {
-  margin-top: 2.5rem;
+  margin-top: 2.6rem;
   text-align: center;
 }
 .not-a-fav {
-  color: white;
   display: flex;
   align-items: center;
 }
@@ -34,44 +39,89 @@ input[type="checkbox"] {
   align-items: center;
 }
 .display-info img {
-  width: 4rem;
-  height: 3.2rem;
+  width: 7.4rem;
+  height: 7rem;
 }
 .display-info p {
- text-transform: capitalize;
+  text-transform: capitalize;
 }
 .temperature {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 1em;
+  align-items: baseline;
 }
 .temperature p {
-  font-size: 4rem;
-  margin-right: 0.5rem;
+  font-size: 6.4rem;
+  margin-right: 0.6rem;
+  font-size:550
 }
-.temperature button {
+.temp-button {
+  position: relative;
+  top: -1.6em;
+}
+
+.temp-button button {
   box-sizing: border-box;
-  height: 1.87rem;
-  width: 1.75rem;
+  padding: 0.5rem 0.6rem;
   border: 1px solid #ffffff;
-  border-radius: .125rem 0 0 .125rem;
+  border-radius: 0.2rem 0 0 0.2rem;
   cursor: pointer;
   color: #ffff;
   background-color: transparent;
 }
-@media all and (max-width: 500px) {
+@media all and (min-width:420px) and (max-width: 780px) {
+  .temperature p {
+    font-size: 5rem;
+  }
+  .main-div {
+    margin-top: 3em;
+  }
+  .display-info {
+    margin-top: 6rem;
+  }
+  .added-to-fav, .not-a-fav p{
+    font-size: 1.8rem;
+  }
+  .like-icon {
+  font-size:2rem;
+}
+}
+
+@media all and (max-width: 420px) {
   .add-to-fav {
     align-items: center;
   }
-  .temperature p {
-    font-size: 3rem;
+  .add-to-fav h1{
+    font-size:2rem;
   }
-  .main-div{
-    margin-top:2em;
+  .temperature p {
+    font-size: 6.2rem;
+  }
+  .temperature{
+    margin:2em 0em;
+  }
+  .main-div {
+    margin-top: 4rem;
   }
   .display-info {
-  margin-top: 5rem;
-  
+    margin-top: 8rem;
+  }
+    .added-to-fav, .not-a-fav p{
+    font-size: 1.8rem;
+  }
+  .like-icon {
+  font-size:2.2rem;
+}
+
+  .mobile-time-display {
+    display: block;
+    text-align: center;
+    color: #ffffff77;
+    margin-bottom: 4em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.mobile-time-display p{
+  font-size:1.7rem
 }
 }

@@ -4,24 +4,18 @@ import { WeatherContext } from "../../services/ContextApi";
 import { newData } from "../../services/Utilis";
 import Tabs from "../navigationTab/Tabs";
 import Route from "../../route/Route";
-import SearchIcon from "@material-ui/icons/Search";
-import MenuIcon from "@material-ui/icons/Menu";
-import "./main.css";
-import axios from "axios";
+import { AiOutlineSearch } from "react-icons/ai";
+import { FiMenu } from "react-icons/fi";
 
-const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?";
+import "./main.css";
+import ApiSearch from "../../services/ApiSearch";
 
 const Main = () => {
   const [inputValue, setInputValue] = useState("");
+  const [search, setSearch] = useState(false);
   const [open, setOpen] = useState(false);
-  const {
-    weatherData,
-    setWeatherData,
-    setFavIcon,
-    storedData,
-    setStoredData,
-    favIcon,
-  } = useContext(WeatherContext);
+  const { store, setStore } = useContext(WeatherContext);
+  const { weatherData, unit, storedData, favIcon } = store;
 
   useEffect(() => {
     if (weatherData) {
@@ -29,33 +23,24 @@ const Main = () => {
         ? updateWeatherData(weatherData)
         : insertWeatherData(weatherData);
     }
-  }, [weatherData, favIcon]);
+  }, [weatherData, favIcon, unit]);
 
   const updateWeatherData = (data) => {
     const index = storedData.findIndex((x) => x.cityId === data.id);
-    storedData[index] = newData(data, favIcon);
-    setStoredData(storedData);
+    storedData[index] = newData(data, favIcon, unit);
+    setStore({ ...store, ["storedData"]: storedData });
   };
 
   const insertWeatherData = (data) => {
-    setStoredData([...storedData, newData(data, favIcon)]);
+    setStore({
+      ...store,
+      ["storedData"]: [...storedData, newData(data, favIcon, unit)],
+    });
   };
-
-  const handleSearch = () => {
-    inputApiSearch();
-    setInputValue("");
-  };
-
-  const inputApiSearch = async () => {
-    const response = await axios
-      .get(
-        BASE_URL +
-          `q=${inputValue}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
-      )
-      .catch((err) => console.log(err));
-    if (response) {
-      setWeatherData(response.data);
-      setFavIcon(false);
+  
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      setSearch(true)
     }
   };
 
@@ -68,7 +53,7 @@ const Main = () => {
             style={{ color: !open ? "white" : "black" }}
             onClick={() => setOpen(!open)}
           >
-            <MenuIcon />
+            <FiMenu fontSize="3rem" />
           </div>
           <img src={logo} alt="title_logo" />
         </div>
@@ -77,16 +62,26 @@ const Main = () => {
             type="text"
             className="searchBar"
             placeholder="Search City"
+            onKeyDown={handleEnter}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
           <div>
-            <SearchIcon className="search" onClick={() => handleSearch()} />
+            <AiOutlineSearch
+              className="search"
+              onClick={() => setSearch(true)}
+            />
           </div>
         </div>
       </div>
-      <Tabs open={open} />
+      <Tabs open={open} setOpen={setOpen} />
       <Route />
+      <ApiSearch
+        input={inputValue}
+        setInput={setInputValue}
+        search={search}
+        setSearch={setSearch}
+      />
     </>
   );
 };

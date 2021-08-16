@@ -1,71 +1,94 @@
 .center-div {
-  margin-top: 2em;
+  margin-top: 3.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3.4em;
+  margin-bottom: 4.4em;
+  color: white;
 }
-
 .searchBar-container {
-  font-size: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  height: 6vh;
+  height: 4.5rem;
   width: 30vw;
   border: 1px solid #ffffff99;
   border-radius: 3px;
   background-color: #ffffff33;
 }
+::placeholder {
+  color: white;
+}
 .searchBar {
   width: 20vw;
-  height: 45px;
+  height: 4.5rem;
   border: none;
   outline: none;
-  line-height: 45px;
-  opacity: 0.8;
+  line-height: 4.5rem;
   color: rgb(255, 255, 255);
   background-color: transparent;
   margin-left: 1em;
 }
 .search {
   color: #ffff;
-  font-size: 1.5rem;
-  padding: 0.5rem;
+  font-size: 2.5rem;
+  padding: 0.8rem;
   cursor: pointer;
 }
-.menu-img{
-  display:flex;
+.menu-img {
+  display: flex;
 }
-@media all and (min-width: 500px){
-.menu-mobile-view{
-  display:none;
+.menu-img img {
+  width: 14.2rem;
+  height: 3rem;
 }
+@media all and (min-width: 550px) {
+  .menu-mobile-view {
+    display: none;
+  }
 }
-@media all and (max-width: 500px) {
+@media all and (min-width: 550px) and (max-width: 770px) {
   .searchBar-container {
     height: 4vh;
-    width: 30vw;
+    width: 25vw;
   }
-  .searchBar{
+  .searchBar {
     width: 15vw;
-    margin-left:0;
+    font-size: 1.2rem;
+  }
+  .menu-mobile-view {
+    color: #ffff;
+    margin-right: 3.2em;
+    cursor: pointer;
   }
   .search {
-  color: #ffff;
-  width:2px;
-  
+    font-size: 3.6em;
+    padding: 0.7rem;
+  }
 }
-  .center-div img{
-  height:1.5rem;
-  width:7.5rem;
+@media all and (max-width: 550px) {
+  .searchBar-container {
+    height: 4vh;
+    width: 25vw;
+    border: none;
+    border-bottom: 1px solid rgb(142, 58, 221);
+    background-color: transparent;
+  }
+  .searchBar {
+    width: 15vw;
+    font-size: 1.2rem;
+  }
+  .menu-mobile-view {
+    color: #ffff;
+    margin-right: 3.2em;
+    cursor: pointer;
+  }
+  .search {
+    font-size: 2rem;
+    padding: 0.7rem;
+  }
+  ::placeholder {
+  font-size:1.4rem
 }
-.menu-mobile-view{
-  color:#fff;
-  margin-right:2em;
-  cursor:pointer;
-  z-index:3;
-}
-
 }

@@ -6,12 +6,14 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
+    <div className='container'>
     <div className="main">
       <BrowserRouter>
         <Weatherprovider>
           <Main />
         </Weatherprovider>
       </BrowserRouter>
+    </div>
     </div>
   );
 }
