@@ -3,11 +3,12 @@
   align-items: baseline;
   justify-content: space-between;
   z-index: 2;
+  margin-top: 6rem;
 }
 .line {
   border-bottom: 1px solid #ffffff44;
   margin-top: -1px;
-  z-index: 1
+  z-index: 1;
 }
 .navigation-tab {
   display: flex;
@@ -31,19 +32,19 @@
   color: white;
   display: flex;
   font-size: 1.4rem;
-  margin-right:1em;
+  margin-right: 1em;
 }
 .current-date-time .time {
   text-transform: uppercase;
 }
-@media all and (min-width:550px ) and (max-width:780px){
-.navigation-item {
-  padding: 0em 1.2em;
-}
-.current-date-time {
-  font-size: 0.9rem;
-  margin-right:0.6em;
-}
+@media all and (min-width: 550px) and (max-width: 780px) {
+  .navigation-item {
+    padding: 0em 1.2em;
+  }
+  .current-date-time {
+    font-size: 0.9rem;
+    margin-right: 0.6em;
+  }
 }
 
 @media all and (max-width: 550px) {

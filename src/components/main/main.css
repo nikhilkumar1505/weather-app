@@ -1,5 +1,5 @@
 .center-div {
-  margin-top: 3.5em;
+  margin-top: 5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,8 +11,8 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  height: 4.5rem;
-  width: 30vw;
+  height: 4rem;
+  width: 25vw;
   border: 1px solid #ffffff99;
   border-radius: 3px;
   background-color: #ffffff33;
@@ -22,7 +22,7 @@
 }
 .searchBar {
   width: 20vw;
-  height: 4.5rem;
+  height: 3.5rem;
   border: none;
   outline: none;
   line-height: 4.5rem;
@@ -40,8 +40,9 @@
   display: flex;
 }
 .menu-img img {
-  width: 14.2rem;
-  height: 3rem;
+  width: 15.2rem;
+  height: 3.5rem;
+  object-fit: contain;
 }
 @media all and (min-width: 550px) {
   .menu-mobile-view {
@@ -89,6 +90,6 @@
     padding: 0.7rem;
   }
   ::placeholder {
-  font-size:1.4rem
-}
+    font-size: 1.4rem;
+  }
 }

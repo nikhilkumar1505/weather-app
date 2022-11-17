@@ -1,18 +1,21 @@
 .weather-data-main {
   border-top: 1px solid #ffffff44;
-  margin-top: 6.6em;
   padding-top: 3.5em;
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
   justify-content: space-around;
   margin-bottom: 2em;
+  position: absolute;
+  width: 100%;
+  top: 60vh;
 }
 .weather-parent {
   display: flex;
   align-items: flex-start;
   padding: 0.4em;
   justify-content: center;
+  margin: 0 2.5rem;
 }
 .weather-parent img {
   height: auto;
@@ -46,7 +49,7 @@
     font-size: 1.8rem;
   }
 }
-@media all and (max-width: 420px) {
+@media all and (max-width: 520px) {
   .weather-data-main {
     background-color: #ffffff11;
     border-top: 1px solid #ffffff55;
@@ -57,21 +60,21 @@
     justify-content: flex-start;
     scroll-behavior: smooth;
     align-items: center;
-    margin-bottom: 0em;
+    top: 65vh;
+    position: absolute;
+    margin-bottom: 0;
   }
-.weather-data-main::-webkit-scrollbar{
-  display:none;
-}
+  .weather-data-main::-webkit-scrollbar {
+    display: none;
+  }
   .weather-parent {
     margin: 1em;
     display: flex;
     padding: 2em;
     padding-right: 10em;
-    min-width:25em;
-  
+    min-width: 25em;
   }
   .weather-child p {
     font-size: 2rem;
-      
   }
 }

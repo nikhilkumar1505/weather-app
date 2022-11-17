@@ -1,6 +1,7 @@
 .main-div {
-  margin-top: 4.7em;
+  margin-top: 6rem;
   color: white;
+  position: relative;
 }
 .main-div h1 {
   text-transform: capitalize;
@@ -11,7 +12,7 @@
   display: none;
 }
 .like-icon {
-  font-size:1.7rem;
+  font-size: 1.7rem;
 }
 .add-to-fav {
   display: flex;
@@ -26,8 +27,9 @@ input[type="checkbox"] {
   display: none;
 }
 .display-info {
-  margin-top: 2.6rem;
+  margin: 4rem 0;
   text-align: center;
+  padding: 4rem 0;
 }
 .not-a-fav {
   display: flex;
@@ -53,7 +55,7 @@ input[type="checkbox"] {
 .temperature p {
   font-size: 6.4rem;
   margin-right: 0.6rem;
-  font-size:550
+  font-size: 550;
 }
 .temp-button {
   position: relative;
@@ -69,7 +71,7 @@ input[type="checkbox"] {
   color: #ffff;
   background-color: transparent;
 }
-@media all and (min-width:420px) and (max-width: 780px) {
+@media all and (min-width: 420px) and (max-width: 780px) {
   .temperature p {
     font-size: 5rem;
   }
@@ -79,26 +81,27 @@ input[type="checkbox"] {
   .display-info {
     margin-top: 6rem;
   }
-  .added-to-fav, .not-a-fav p{
+  .added-to-fav,
+  .not-a-fav p {
     font-size: 1.8rem;
   }
   .like-icon {
-  font-size:2rem;
-}
+    font-size: 2rem;
+  }
 }
 
 @media all and (max-width: 420px) {
   .add-to-fav {
     align-items: center;
   }
-  .add-to-fav h1{
-    font-size:2rem;
+  .add-to-fav h1 {
+    font-size: 2rem;
   }
   .temperature p {
     font-size: 6.2rem;
   }
-  .temperature{
-    margin:2em 0em;
+  .temperature {
+    margin: 2em 0em;
   }
   .main-div {
     margin-top: 4rem;
@@ -106,12 +109,13 @@ input[type="checkbox"] {
   .display-info {
     margin-top: 8rem;
   }
-    .added-to-fav, .not-a-fav p{
+  .added-to-fav,
+  .not-a-fav p {
     font-size: 1.8rem;
   }
   .like-icon {
-  font-size:2.2rem;
-}
+    font-size: 2.2rem;
+  }
 
   .mobile-time-display {
     display: block;
@@ -120,8 +124,8 @@ input[type="checkbox"] {
     margin-bottom: 4em;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-}
-.mobile-time-display p{
-  font-size:1.7rem
-}
+  }
+  .mobile-time-display p {
+    font-size: 1.7rem;
+  }
 }
