@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# All City Weather
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the weather app! With this app, you'll never be caught off-guard by changing weather conditions again. This app provides you with accurate and up-to-date weather information for your current location or any location of your choice.The home screen of the app displays the current weather conditions, including the temperature, humidity, wind speed, and direction. 
 
-## Available Scripts
+The Favourites tab allows you to save your frequently visited locations for quick and easy access. You can add and remove locations to this list at any time, and the app will remember your preferences for future use.The Recent tab keeps track of your most recent searches, so you can quickly and easily refer back to them if needed. 
 
-In the project directory, you can run:
+Overall, the weather app is a powerful tool for staying informed about weather conditions and planning your activities accordingly. With accurate and up-to-date information at your fingertips, you'll always be prepared for whatever Mother Nature has in store.
 
-### `npm start`
+## `Screen Shots`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Screenshot 2023-03-12 at 14 15 45](https://user-images.githubusercontent.com/68338566/224534165-5d090355-1118-4645-bd0e-3aa15adc7dc1.png)
+![Screenshot 2023-03-12 at 14 16 10](https://user-images.githubusercontent.com/68338566/224534174-477a23ce-be11-4d44-9bd0-ea5e285fe612.png)
+![Screenshot 2023-03-12 at 14 16 27](https://user-images.githubusercontent.com/68338566/224534178-c723208b-1b03-40f3-a41f-76b7f59478e6.png)
+![Screenshot 2023-03-12 at 14 16 35](https://user-images.githubusercontent.com/68338566/224534179-45090aeb-6ea6-458f-b554-46279e846dda.png)
+![Screenshot 2023-03-12 at 14 17 28](https://user-images.githubusercontent.com/68338566/224534182-2cdc1d2a-c58c-4b37-91e5-4f318e71e735.png)
+![Screenshot 2023-03-12 at 14 17 46](https://user-images.githubusercontent.com/68338566/224534184-a2b9c056-cc29-4985-b52c-34454a49cac2.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Library and Api`
 
-### `npm test`
+> BaseUrl :https://api.openweathermap.org
+- axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Live URL`
 
-### `npm run build`
+The weather in my city is like a magic show😵‍💫 - you never know what tricks Mother Nature has up her sleeve!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Check Yours Now 😉 : [All City Weather](https://allcityweather.netlify.app/favourite) 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
