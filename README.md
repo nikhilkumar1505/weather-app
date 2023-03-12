@@ -24,5 +24,5 @@ Overall, the weather app is a powerful tool for staying informed about weather c
 
 The weather in my city is like a magic show😵‍💫 - you never know what tricks Mother Nature has up her sleeve!
 
-Check Yours Now 😉 : [All City Weather](https://allcityweather.netlify.app/favourite) 
+Check Yours Now 😉 : [All City Weather](https://allcityweather.netlify.app)
 
